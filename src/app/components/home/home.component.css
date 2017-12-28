@@ -1,0 +1,9 @@
+h1, h2, p{
+    text-align:center 
+}
+canvas{
+    margin-left:30% 
+}
+section{ 
+    background: linear-gradient(white, rgb(69, 69, 165))
+}

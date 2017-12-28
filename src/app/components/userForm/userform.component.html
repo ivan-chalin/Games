@@ -1,0 +1,16 @@
+<h1>nova registraciq</h1>
+<form (ngSubmit)='userdata()' [formGroup]='userForm'>
+  <label for="name"  >name</label>
+  <br/>
+  <input id="name" formControlName='name'/>
+  <br/>
+  <label for="password"  >password</label>
+  <br/>
+  <input id="password" formControlName='password'/>
+  <br/>
+  <label for="age"  >age</label>
+  <br/>
+  <input id="age" formControlName='age'/>
+  <br/>
+  <input type="submit" value="save"/>
+</form>

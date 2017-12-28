@@ -1,0 +1,14 @@
+<section>
+<h1>this is question</h1>
+<span >tvoite tochki sa: {{point}}</span> 
+<select #mod [value]='chois'>
+    <option  *ngFor='let i of chois' [value]='i'>{{i}}</option>
+</select>
+<button (click)='hit(mod.value)'>click</button>
+<p *ngIf='showpik' (click)='rezult()'> 
+<img *ngIf='carsData' size src={{carsData[randum].pik}} /> 
+</p>
+<div *ngIf='point==30'>{{carsData[randum].model}}</div> 
+<span class="gamerezult" *ngIf='gamerez' >{{gamerez}}</span>
+<button class="reset" *ngIf='!showpik' (click)='next()' >opitai pak</button> 
+</section>  

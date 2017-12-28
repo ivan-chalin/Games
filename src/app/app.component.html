@@ -1,0 +1,20 @@
+ <header> 
+<img src="../assets/fon.jpg"/>
+ <h1>wellcome
+    <span *ngIf='user()'>{{user()}}</span> 
+</h1> 
+
+ <nav>
+ <a routerLink='/home'>home</a>
+ <a routerLink='/userform'>dataform</a>
+ <a routerLink='/game'>game</a>
+ </nav>
+ 
+ </header>
+ <br/>
+ <br/>
+ <router-outlet></router-outlet>
+ <br/>
+ <br/>
+ <footer></footer>
+
