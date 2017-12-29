@@ -29,7 +29,9 @@ import {Observable} from 'rxjs/Observable'
 
    rezult(){ 
      this.point -=10;
-     if(this.point === -20) {this.showpik = false} 
+     if(this.point === -20) {this.showpik = false; this.gamerez = 'Nooo'; 
+     this.sendnumber.emit(this.point)
+    } 
    }
 
    getdata(){

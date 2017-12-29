@@ -31,5 +31,9 @@
  }
  .reset:hover{
      background-color: gold;
-     font-size:70px 
+     font-size:70px;
+     cursor: pointer;
+ }
+ div{
+     text-align: center
  }

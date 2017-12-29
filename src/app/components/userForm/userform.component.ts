@@ -27,7 +27,6 @@ import {Router} from '@angular/router'
     userdata(){
         sessionStorage.setItem('password', this.userForm.value.password)
         sessionStorage.setItem('name',this.userForm.value.name)
-        this.rout.navigate(['/home'])
-        console.log(this.userForm.value)
+        this.rout.navigate(['/home']) 
     }
   }

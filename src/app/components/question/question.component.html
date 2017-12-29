@@ -7,8 +7,8 @@
 <button (click)='hit(mod.value)'>choice</button>
 <p *ngIf='showpik' (click)='rezult()'> 
 <img *ngIf='carsData' size src={{carsData[randum].pik}} /> 
-</p>
-<div *ngIf='point==30'>{{carsData[randum].model}}</div> 
+</p> 
 <span class="gamerezult" *ngIf='gamerez' >{{gamerez}}</span>
+<div *ngIf='!showpik'>this is: {{carsData[randum].model}}</div> 
 <button class="reset" *ngIf='!showpik' (click)='next()' >new game</button> 
 </section>  

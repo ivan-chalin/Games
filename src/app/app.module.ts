@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-
+import {GameGuard} from './services/game-guard.guard' 
 
 import { AppComponent } from './app.component';
 import { DataService } from 'app/services/data.service'; 
@@ -32,7 +32,7 @@ import { gameComponent } from 'app/components/game/game.component';
     ReactiveFormsModule,
     routingModule
   ],
-  providers: [DataService],
+  providers: [DataService, GameGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
