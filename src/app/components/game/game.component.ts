@@ -11,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
     curentX = 20
     curentY = 1 
     prevX = 0
-    prevY = 0
+    prevY = 0 
     
     ngOnInit(){
        
@@ -40,6 +40,10 @@ import { Component, OnInit } from '@angular/core';
       this.prevX +=20
       this.prevY ++
       this.sum.push(data)
-      this.chart()
+      this.chart() 
+    }
+    totalSum(){
+    return  this.sum.reduce((a, b) => a + b)
+     
     }
   }

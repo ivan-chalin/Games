@@ -13,7 +13,7 @@ export class GameGuard implements CanActivate {
 
   check(){
     if(!sessionStorage.getItem('name')){
-      this.router.navigate(['/home'])
+      this.router.navigate(['/userform'])
         return false
     }else{
       return true

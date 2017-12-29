@@ -4,3 +4,8 @@ h1{
 section{
     background: linear-gradient(white, rgb(69, 69, 165))
 }
+p{
+    text-align: center;
+    font-size: 30px;
+    color: red
+}
