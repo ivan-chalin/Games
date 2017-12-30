@@ -41,7 +41,7 @@ import {Observable} from 'rxjs/Observable'
    }
 
   randumgen(){
-   let r =  Math.floor((Math.random() * 10) + 1)
+   let r =  Math.floor((Math.random() * 15) + 1)
    this.randum = r
   }
 

@@ -8,6 +8,7 @@ import { gameComponent } from 'app/components/game/game.component';
 
 
 const routes:Routes = [
+  {path:'',pathMatch:'full', redirectTo: '/home'},
   {path:'home', component: homeComponent},
   {path:'userform', component: userformComponent},
   {path:'game',canActivate:[GameGuard], component: gameComponent} 
