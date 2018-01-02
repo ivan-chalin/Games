@@ -14,6 +14,7 @@ import { footerComponent } from 'app/components/footer/footer.component';
 import { questionComponent } from 'app/components/question/question.component';
 import { imgsize } from 'app/directive/imgsize.directive';
 import { gameComponent } from 'app/components/game/game.component';
+import { gameResultComponent } from 'app/components/gameResult/gameResult.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { gameComponent } from 'app/components/game/game.component';
     footerComponent,
     questionComponent,
     imgsize,
-    gameComponent
+    gameComponent,
+    gameResultComponent
   ],
   imports: [
     BrowserModule,

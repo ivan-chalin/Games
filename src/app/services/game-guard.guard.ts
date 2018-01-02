@@ -9,6 +9,7 @@ export class GameGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     return this.check()
+    
   }
 
   check(){

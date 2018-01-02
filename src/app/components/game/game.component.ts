@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'; 
-
+import {Router} from '@angular/router'
 @Component({
     selector: 'game',
     templateUrl: './game.component.html',
@@ -12,6 +12,8 @@ import { Component, OnInit } from '@angular/core';
     curentY = 1 
     prevX = 0
     prevY = 0 
+
+    constructor(private rout:Router){}
     
     ngOnInit(){
        
@@ -40,10 +42,18 @@ import { Component, OnInit } from '@angular/core';
       this.prevX +=20
       this.prevY ++
       this.sum.push(data)
-      this.chart() 
+      this.chart()
+      this.endGame ()
     }
     totalSum(){
     return  this.sum.reduce((a, b) => a + b)
      
     }
+
+    endGame(){
+      if(this.totalSum() >=50 || this.totalSum() <= -50){
+        this.rout.navigate(['/home'])
+      }
+    }
+  
   }
