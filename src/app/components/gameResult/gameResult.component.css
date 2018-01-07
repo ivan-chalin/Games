@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    color:orange
+}
+h2{
+    text-align:center 
+}
+section{ 
+    height: 500px;
+    background: linear-gradient(white, rgb(69, 69, 165))
+}

@@ -21,6 +21,13 @@ export class DataService {
    getcars(){
        return this.http.get(baseurl, {headers:this.hedcreate()})
    }
+
+    increas(){
+      let r = 0
+    return  setInterval(function(){
+        r +=1  
+      }, 1000)
+    }
   }
 
    

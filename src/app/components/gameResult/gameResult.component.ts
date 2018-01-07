@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
   })
 
   export class gameResultComponent implements OnInit{ 
+    endRezult ='' 
+    
+      ngOnInit(){
+          this.getrezult()
+      }
 
 
-      ngOnInit(){}
+      getrezult(){
+          let rezult = sessionStorage.getItem('rezult')
+          if(Number(rezult) >= 50){this.endRezult = 'super ...! you are the winner'}
+          else{this.endRezult = 'oops ...! you lose, try again'}
+               
+      }
   }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core'; 
-import {Router} from '@angular/router'
+import {Router} from '@angular/router'; 
+import {Observable} from 'rxjs/Rx';
+import {DataService} from '../../services/data.service';
+
 @Component({
     selector: 'game',
     templateUrl: './game.component.html',
@@ -11,12 +14,17 @@ import {Router} from '@angular/router'
     curentX = 20
     curentY = 1 
     prevX = 0
-    prevY = 0 
+    prevY = 0  
+    tics
 
-    constructor(private rout:Router){}
+    constructor(private rout:Router, private data: DataService){
+
+      
+    }
     
-    ngOnInit(){
-       
+    ngOnInit(){  
+       let timer =  Observable.timer(5, 1000).take(25)
+       timer.subscribe(t=>{this.tics = 20 - t; if(t>20){ this.rout.navigate(['/gameresult'])}}) 
     }
  
 
@@ -52,8 +60,11 @@ import {Router} from '@angular/router'
 
     endGame(){
       if(this.totalSum() >=50 || this.totalSum() <= -50){
-        this.rout.navigate(['/home'])
+        sessionStorage.setItem('rezult',JSON.stringify(this.totalSum()))
+        this.rout.navigate(['/gameresult'])
       }
-    }
-  
+    }  
+   
+ 
+     
   }
