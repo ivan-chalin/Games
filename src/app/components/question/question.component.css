@@ -4,7 +4,8 @@
  section{
      border: 1px solid red;
      width: 60%;
-     height: 600px
+     height: 600px; 
+     margin-left: 20%
  }
  h1{
      text-align: center

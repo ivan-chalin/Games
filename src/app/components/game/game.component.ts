@@ -23,8 +23,8 @@ import {DataService} from '../../services/data.service';
     }
     
     ngOnInit(){  
-       let timer =  Observable.timer(5, 1000).take(25)
-       timer.subscribe(t=>{this.tics = 20 - t; if(t>20){ this.rout.navigate(['/gameresult'])}}) 
+       let timer =  Observable.timer(5, 1000).take(60)
+       timer.subscribe(t=>{this.tics = 50 - t; if(t>50){ this.rout.navigate(['/gameresult'])}}) 
     }
  
 
@@ -59,7 +59,7 @@ import {DataService} from '../../services/data.service';
     }
 
     endGame(){
-      if(this.totalSum() >=50 || this.totalSum() <= -50){
+      if(this.totalSum() >=100 || this.totalSum() <= -100){
         sessionStorage.setItem('rezult',JSON.stringify(this.totalSum()))
         this.rout.navigate(['/gameresult'])
       }
